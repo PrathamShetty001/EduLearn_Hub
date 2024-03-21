@@ -5,6 +5,8 @@ import { FlatList, ScrollView } from 'react-native-gesture-handler'
 import ContentItem from './ContentItem'
 import Colors from '../../Utils/Colors'
 import { useNavigation } from '@react-navigation/native'
+import { Video, ResizeMode } from 'expo-av';
+import { StyleSheet } from 'react-native'
 
 export default function Content({content,onChapterFinish}) {
   
@@ -40,6 +42,17 @@ export default function Content({content,onChapterFinish}) {
         }}
         renderItem={({item,index})=>(
           <View style={{width:Dimensions.get('screen').width,padding:20}}>
+            {item.video &&<Video
+              shouldPlay={true}
+              style={styles.video}
+               source={{
+                uri: item?.video?.url,
+                }}
+        useNativeControls={true}
+        resizeMode={ResizeMode.CONTAIN}
+        isLooping
+      />}
+      
             <Text style={{fontFamily:'outfit-semibold',
           fontSize:22, marginTop:15}}>{item.heading}</Text>
           <ContentItem description={item?.description?.html}
@@ -63,3 +76,11 @@ export default function Content({content,onChapterFinish}) {
     </ScrollView>
   )
 }
+
+
+const styles = StyleSheet.create({
+  video:{
+    width:'100%',
+    height:250
+  }
+})

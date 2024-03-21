@@ -141,7 +141,7 @@ export default function LoginScreen() {
           {'</>'}
         </Animated.Text>
         <Text style={{ textAlign: 'center', fontSize: 35, color: Colors.WHITE, fontFamily: 'outfit-bold', marginTop: -10 }}>
-          CODEBOX
+          EduLearn Hub
         </Text>
         <Text
           style={{

@@ -44,7 +44,7 @@ const Profile = () => {
         <Image source={{uri:user?.imageUrl}} 
         style={{width:80,height:80, borderRadius:99,margin:50,marginLeft:130}}/>
         <View>
-            <Text style={{fontFamily:'outfit-semibold',fontSize:25,marginTop:-40,marginLeft:88}}>{user?.fullName}</Text>
+            <Text style={{fontFamily:'outfit-semibold',fontSize:25,marginTop:-40,marginLeft:70}}>{user?.fullName}</Text>
         </View>
       </View>
     </View>

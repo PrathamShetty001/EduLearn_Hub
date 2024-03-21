@@ -32,6 +32,9 @@ export const getCourseList=async(level)=>{
               markdown
               html
             }
+            video{
+              url
+            }
           }
         }
       }

@@ -2,7 +2,6 @@ import { View, Text,Image,StyleSheet } from 'react-native'
 import React from 'react'
 import { useUser } from '@clerk/clerk-expo'
 import Colors from '../../Utils/Colors';
-import coin from '../../../assets/images/coin.png'
 import { TextInput,GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -18,10 +17,6 @@ export default function Header() {
             <Text style={{color:Colors.WHITE, fontFamily:'outfit-regular'}}>Welcome</Text>
             <Text style={styles.mainText}>{user?.fullName}</Text>
         </View>
-      </View>
-      <View style={styles.rowStyle}>
-        <Image source={coin} style={{width:35,height:35}}/>
-        <Text style={styles.mainText}>3580</Text>
       </View>
     </View>
     <View style={[{backgroundColor:Colors.WHITE,paddingLeft:20,paddingRight:5,marginTop:25,borderRadius:99},styles.rowStyle]}>
