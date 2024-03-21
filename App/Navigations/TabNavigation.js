@@ -7,6 +7,7 @@ import Profile from '../Screen/Profile';
 import { FontAwesome } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 import HomeScreenNavigation from './HomeScreenNavigation';
 
 const Tab=createBottomTabNavigator();
@@ -32,7 +33,7 @@ export default function TabNavigation() {
         <Tab.Screen name="feedback" component={FeedBack}
         options={{
           tabBarIcon:({color,size})=>(
-            <MaterialIcons name="leaderboard" size={size} color={color} /> 
+            <AntDesign name="form" size={size} color={color} />
           )
         }}/>
         <Tab.Screen name="profile" component={Profile}
